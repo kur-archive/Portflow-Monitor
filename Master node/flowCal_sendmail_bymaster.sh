@@ -76,6 +76,8 @@ do
                flow_num=$flow_num_original
                flowUnit='B'
     fi
+
+    #TODO::下面中文的部分都需要补充
     email_title="邮件title"
 
     email_content="
