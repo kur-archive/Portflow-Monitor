@@ -1,7 +1,8 @@
 # Portflow-Monitor
-linux端口流量监视
+linux端口流量监视<br/>
 
-程序整理中
+
+`程序整理中`
 
 脚本分为两个部分，一个部分是子节点脚本`child node`，也就是代理服务器，另一部分是收集分析数据和发送邮件 的 主节点脚本`master node`.
 
@@ -20,3 +21,4 @@ linux端口流量监视
 a.PHP处理起数据来会更加自由，也可以用Shell_exec使用shell的力量来处理
 
 b.邮件发送，Linux上的一些邮件发送程序长时间无人维护，以至于在新版的perl下ssl发送无法运行。。。使用Laravel（php）的smtp邮件发送类，搭配blade模板渲染，发送邮件更加方便，再和之后要做的后台搭配效果更佳
+
