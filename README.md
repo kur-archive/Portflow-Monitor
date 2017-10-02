@@ -1,7 +1,7 @@
 # Portflow-Monitor <small><small><small>linux端口流量监视</small></small></small>
 
 [![branch](https://img.shields.io/badge/branch-shell-green.svg)](#)
-[![Operating System](https://img.shields.io/badge/Operating%20System-CentOS%207-blue.svg)](#)
+[![Operating System](https://img.shields.io/badge/OperatingSystem-CentOS%207.x-red.svg)](#)
 [![license](https://img.shields.io/npm/l/express.svg)](#)
 
 项目 `实现思路` & `代码解析` 参见 [Doc](https://github.com/Kuri-su/Portflow-Monitor/blob/master/Thinking%26CodeResolve.md "Doc" )  
