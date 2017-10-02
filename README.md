@@ -106,14 +106,15 @@
         使用 `:wq` 保存
 
 * 主节点 `masterNode`
-    1. 将 `flowCal_sendmail_bymaster.sh` 拷贝到 `/root/flowCal/` 文件夹下.
+    1. 将 `flowCal_sendmail_bymaster.sh` 拷贝到主服务器 `/root/flowCal/` 文件夹下.
         > 可以根据自身需要放在别的文件夹下，这里只是做个例示
+        > 如果只有一台服务器，主节点脚本和副节点脚本放在同一台服务器上的问题也不大
     2. 输入指令
             ```bash
                 vim /etc/crontab 
             ```
             
-            添加 两条计划任务 ，输入完成后，文件大致为这样
+            添加 一条计划任务 ，输入完成后，文件大致为这样
             
             ```bash
                SHELL=/bin/bash
@@ -140,6 +141,12 @@
 至此，部署完成
 关于实现思路和具体说明参见 [wiki](https://github.com/Kuri-su/Portflow-Monitor/wiki "wiki" ) 标签
 
+<hr/>
+
+## WARNING
+因为 `flowCal_sendmail_bymaster.sh` 使用了 `linux` 上的 `sendEmail` 程序，而该程序久未更新和维护， `SSL` 在新版本的perl下运行会报错，而 `Gmall`是强制 `SSL`，所以推荐使用 `Sina` 邮箱，且 `Sina` 邮箱发邮件无限制
+
+<hr/>
 
 脚本分为两个部分，一个部分是子节点脚本`child node`，也就是代理服务器，另一部分是收集分析数据和发送邮件 的 主节点脚本`master node`.
 
