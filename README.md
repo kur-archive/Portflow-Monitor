@@ -110,50 +110,45 @@
         > 可以根据自身需要放在别的文件夹下，这里只是做个例示
         > 如果只有一台服务器，主节点脚本和副节点脚本放在同一台服务器上的问题也不大
     2. 输入指令
-            ```bash
-                vim /etc/crontab 
-            ```
-            
-            添加 一条计划任务 ，输入完成后，文件大致为这样
-            
-            ```bash
-               SHELL=/bin/bash
-               PATH=/sbin:/bin:/usr/sbin:/usr/bin
-               MAILTO=root
-               
-               # For details see man 4 crontabs
-               
-               # Example of job definition:
-               # .---------------- minute (0 - 59)
-               # |  .------------- hour (0 - 23)
-               # |  |  .---------- day of month (1 - 31)
-               # |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
-               # |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
-               # |  |  |  |  |
-               # *  *  *  *  * user-name  command to be executed
-               
-                11 * * */1 *  root  /usr/bin/sh /root/flowCal/flowCal_sendmail_bymaster.sh
-            ```
-            
-            使用 :wq 保存
+        ```bash
+            vim /etc/crontab 
+        ```
+        
+        添加 两条计划任务 ，输入完成后，文件大致为这样
+                
+       ```bash
+           SHELL=/bin/bash
+           PATH=/sbin:/bin:/usr/sbin:/usr/bin
+           MAILTO=root
+           
+           # For details see man 4 crontabs
+           
+           # Example of job definition:
+           # .---------------- minute (0 - 59)
+           # |  .------------- hour (0 - 23)
+           # |  |  .---------- day of month (1 - 31)
+           # |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+           # |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+           # |  |  |  |  |
+           # *  *  *  *  * user-name  command to be executed
+           
+            11 * * */1 *  root  /usr/bin/sh /root/flowCal/flowCal_sendmail_bymaster.sh
+        
+        
+           使用 :wq 保存
+        ```
 
+<br/>
+至此，部署完成<br/>
 
-至此，部署完成
 关于实现思路和具体说明参见 [wiki](https://github.com/Kuri-su/Portflow-Monitor/wiki "wiki" ) 标签
 
 <hr/>
 
 ## WARNING
-因为 `flowCal_sendmail_bymaster.sh` 使用了 `linux` 上的 `sendEmail` 程序，而该程序久未更新和维护， `SSL` 在新版本的perl下运行会报错，而 `Gmall`是强制 `SSL`，所以推荐使用 `Sina` 邮箱，且 `Sina` 邮箱发邮件无限制
+因为 `flowCal_sendmail_bymaster.sh` 使用了 `linux` 上的 `sendEmail` 程序，而该程序久未更新和维护， `SSL` 在新版本的perl下运行会报错，而 `Gmall`是强制 `SSL`，所以推荐使用 `Sina` 邮箱，且 `Sina` 邮箱发邮件无限制， 而 `Gmail` 如果连续发邮件会有时间间隔限制(反垃圾邮件).
 
 <hr/>
-
-脚本分为两个部分，一个部分是子节点脚本`child node`，也就是代理服务器，另一部分是收集分析数据和发送邮件 的 主节点脚本`master node`.
-
-子节点通过摘取`iptables`的端口的流量监听结果，来进行流量统计，然后每小时记录到log中，每日生成日流量总结，放在`${year}${month}_monthlog.txt`文件中，等待master节点的收集
-
-主节点 在指定时间用`scp命令`去收集各个子节点 的 **月流量各节点明细** 进行计算，得到月流量总数，进行`数据处理`和`邮件发送`
-
 
 
 
@@ -161,8 +156,7 @@
 + `子节点脚本`采用json格式来记录流量数据<br/>
 + 代码更加适合阅读`（代码还没整理）`
 + 增加新的分支，移植到基于Laravel的php流量统计。
-
-a.PHP处理起数据来会更加自由，也可以用Shell_exec使用shell的力量来处理
-
-b.邮件发送，Linux上的一些邮件发送程序长时间无人维护，以至于在新版的perl下ssl发送无法运行。。。使用Laravel（php）的smtp邮件发送类，搭配blade模板渲染，发送邮件更加方便，再和之后要做的后台搭配效果更佳
+    1. PHP处理起数据来会更加自由，也可以用Shell_exec使用shell的力量来处理
+    
+    2. 邮件发送，Linux上的一些邮件发送程序长时间无人维护，以至于在新版的perl下ssl发送无法运行。。。使用Laravel（php）的smtp邮件发送类，搭配blade模板渲染，发送邮件更加方便，再和之后要做的后台搭配效果更佳
 
