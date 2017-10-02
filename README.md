@@ -6,20 +6,19 @@
 \# 安装步骤如下：
 
 
-1. 首先修改程序， `chileNode/generate_flowlog.sh`文件中
+1. 修改程序， `chileNode/generate_flowlog.sh`文件
 
-    1. line 5 ,默认从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，5-15行代码
-```php
-portlist=
-    `
+    1. line 5 ,默认从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，请修改相关代码
+```shell
+portlist=`
     cat /home/ssr/mudb.json 
     | grep port 
     | sed -r 's/( )+\"port\": //g' 
     | sed 's/,$//g' 
     `
 ```
-*
-    
+2. `chileNode/dateProcessing.sh`文件
+    1.因为也是从`/home/ssr/mudb.json`中获取需要监控的端口，如需要监控别的端口，请修改相关代码
     
     
     
