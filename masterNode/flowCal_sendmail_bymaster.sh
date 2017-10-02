@@ -97,7 +97,7 @@ do
     ;;
 
     *)
-        echo -e "~~~Time:${date} ~~~~Content: ${portflow}  is not sendEmail ">> /root/flowCal/error.log
+        echo -e "~~~Time:${date} ~~~~Content: ${portflow}  is not sendEmail ">> /var/log/flowCal/error.log
     ;;
     esac
 done
