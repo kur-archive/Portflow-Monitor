@@ -103,7 +103,7 @@
             1  0  */1 * * root  /usr/bin/sh /root/flowCal/dateProcessing.sh
         ```
         
-        使用 `:wq` 保存
+        使用 :wq 保存
 
 * 主节点 `masterNode`
     1. 将 `flowCal_sendmail_bymaster.sh` 拷贝到主服务器 `/root/flowCal/` 文件夹下.
@@ -135,7 +135,7 @@
                 11 * * */1 *  root  /usr/bin/sh /root/flowCal/flowCal_sendmail_bymaster.sh
             ```
             
-            使用 `:wq` 保存
+            使用 :wq 保存
 
 
 至此，部署完成
