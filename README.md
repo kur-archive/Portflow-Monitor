@@ -1,7 +1,7 @@
 # Portflow-Monitor <small><small><small>linux端口流量监视</small></small></small>
 
 
-项目详细说明参见 [wiki](https://github.com/Kuri-su/Portflow-Monitor/wiki "wiki" ) 标签
+项目 `实现思路` & `代码解析` 参见 [wiki](https://github.com/Kuri-su/Portflow-Monitor/wiki "wiki" ) 标签
 <hr/>
 # 安装步骤如下：
 
@@ -141,7 +141,7 @@
 <br/>
 至此，部署完成<br/>
 
-关于实现思路和具体说明参见 [wiki](https://github.com/Kuri-su/Portflow-Monitor/wiki "wiki" ) 标签
+关于项目 `实现思路` & `代码解析` 参见 [wiki](https://github.com/Kuri-su/Portflow-Monitor/wiki "wiki" ) 标签
 
 <hr/>
 
