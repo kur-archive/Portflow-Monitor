@@ -3,12 +3,12 @@
 
 项目详细说明参见 [wiki](https://github.com/Kuri-su/Portflow-Monitor/wiki "wiki" ) 标签
 <hr/>
-\# 安装步骤如下：
+# 安装步骤如下：
 
 
-1. 修改程序， `chileNode/generate_flowlog.sh`文件
+1. 修改 `chileNode/generate_flowlog.sh` 文件
 
-    1. line 5 ,默认从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，请修改相关代码
+    1. `line 5` ,默认从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，请修改相关代码
 ```shell
 portlist=`
     cat /home/ssr/mudb.json 
@@ -17,8 +17,21 @@ portlist=`
     | sed 's/,$//g' 
     `
 ```
-2. `chileNode/dateProcessing.sh`文件
-    1.因为也是从`/home/ssr/mudb.json`中获取需要监控的端口，如需要监控别的端口，请修改相关代码
+2. 修改 `chileNode/dateProcessing.sh` 文件
+    1. 因为也是从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，请修改相关代码
+```shell
+    代码同上
+```
+
+3. 修改 `masterNode/flowCal_sendmail_bymaster.sh`  文件<br/>
+    1. `line 13`, 填写需要收取流量资料的服务器的ssh登陆 `IP` 和 `port` 
+```shell
+    targetIP='目标服务器'
+    targetPort='端口'
+    eg: ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+    targetIP='111.111.111.111'
+    targetPort='1234'
+```
     
     
     
