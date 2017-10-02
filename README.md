@@ -1,7 +1,7 @@
 # Portflow-Monitor <small><small><small>linux端口流量监视</small></small></small>
 
 
-项目 `实现思路` & `代码解析` 参见 参见 [Doc](https://github.com/Kuri-su/Portflow-Monitor/blob/master/Thinking%26CodeResolve.md "Doc" )  
+项目 `实现思路` & `代码解析` 参见 [Doc](https://github.com/Kuri-su/Portflow-Monitor/blob/master/Thinking%26CodeResolve.md "Doc" )  
 <hr/>
 # 安装步骤如下：
 
