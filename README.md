@@ -1,7 +1,38 @@
-# Portflow-Monitor
-linux端口流量监视<br/>
+# Portflow-Monitor <small><small><small>linux端口流量监视</small></small></small>
 
 
+项目详细说明参见 [wiki](https://github.com/Kuri-su/Portflow-Monitor/wiki "wiki" ) 标签
+<hr/>
+\# 安装步骤如下：
+
+
+1. 首先修改程序， `chileNode/generate_flowlog.sh`文件中
+
+    1. line 5 ,默认从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，5-15行代码
+```php
+portlist=
+    `
+    cat /home/ssr/mudb.json 
+    | grep port 
+    | sed -r 's/( )+\"port\": //g' 
+    | sed 's/,$//g' 
+    `
+```
+*
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 `程序整理中`<br/>
 `详细的安装和使用手册整理中`
 
@@ -14,7 +45,7 @@ linux端口流量监视<br/>
 
 
 
-#### 更新计划
+### 更新计划
 + `子节点脚本`采用json格式来记录流量数据<br/>
 + 代码更加适合阅读`（代码还没整理）`
 + 增加新的分支，移植到基于Laravel的php流量统计。
