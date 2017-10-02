@@ -20,7 +20,6 @@ email_sender=""
 email_username=""
 email_password=""
 email_smtphost="smtp.sina.com"
-email_title=""
 
 
 `scp -P ${targetPort} ${targetIP}:/root/flowListen/${lastMonth}_monthlog.txt /root/flowCal/loglist`

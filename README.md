@@ -6,27 +6,28 @@
 # 安装步骤如下：
 
 * 修改文件
-    1. 修改 `chileNode/generate_flowlog.sh` 文件
+    1. 修改 `/chileNode/generate_flowlog.sh` 文件
 
         1. `line 5` ,默认从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，请修改相关代码
-        ```shell
-        portlist=`
+        ```bash
+        portlist=
+            ` 
             cat /home/ssr/mudb.json 
             | grep port 
             | sed -r 's/( )+\"port\": //g' 
             | sed 's/,$//g' `
         ```
     
-    2. 修改 `chileNode/dateProcessing.sh` 文件
+    2. 修改 `/chileNode/dateProcessing.sh` 文件
         1. 因为也是从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，请修改相关代码
         
-        ```shell
+        ```bash
             代码同上
         ```
 
-    3. 修改 `masterNode/flowCal_sendmail_bymaster.sh`  文件<br/>
+    3. 修改 `/masterNode/flowCal_sendmail_bymaster.sh`  文件<br/>
         1. `line 13`, 填写需要收取流量资料的服务器的ssh登陆 `IP` 和 `port` 
-        ```shell
+        ```bash
             eg: 
             targetIP = '111.111.111.111'
             targetPort = '1234'
@@ -34,13 +35,17 @@
     
         2. `line 19-24`, 填写邮件的发送需要用到的各种信息
             
-        ```shell
+        ```bash
             eg:
             email_sender = "aaa@gmail.com"
             email_username = "gmail_username"
             email_password = "gmail_userpass"
             email_smtphost = "smtp.gmail.com"
-            email_title = "email_title"
+        ```
+        
+        3. `line 80-97+`, 填写邮件的标题、内容、以及每个端口的目标邮箱
+        ```bash
+
         ```
     
     
