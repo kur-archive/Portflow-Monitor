@@ -167,8 +167,11 @@
 <hr/>
 
 ## 运行效果
+日志目录截图
 ![image](https://github.com/Kuri-su/Portflow-Monitor/blob/master/_img/dirImg.png "dirImg")
+小时日志截图
 ![image](https://github.com/Kuri-su/Portflow-Monitor/blob/master/_img/hourImg.png "hourImg")
+每日目录截图
 ![image](https://github.com/Kuri-su/Portflow-Monitor/blob/master/_img/dayImg.png "dayImg")
 
 
