@@ -78,7 +78,10 @@ wait to add
     done
 
 #一行一行的搜索，标记目前已经在监听的端口
-#这样一方面是为了在添加了新的端口用户以后,可以立刻更新到, 另一方面是因为 iptables 的这个配置我没有写入配置, 在重启后会还原, 所以每次启动脚本之前会检查一遍, mudb.json 中各个端口的监听情况, 如果有端口漏了,就会加上去, 这样即便丢失,也只是丢失某一个小时的流量数据
+#这样一方面是为了在添加了新的端口用户以后,可以立刻更新到, 
+# 另一方面是因为 iptables 的这个配置我没有写入配置, 在重启后会还原, 
+# 所以每次启动脚本之前会检查一遍, mudb.json 中各个端口的监听情况, 
+# 如果有端口漏了,就会加上去, 这样即便丢失,也只是丢失某一个小时的流量数据
 
 #这里是对output的端口进行判断,如果如果已经监听,则在数组中标记为LISTEN
     for((i=$outputStartRow; i<=$outputEndRow ; i=i+1))
@@ -161,7 +164,11 @@ for var in $portlist
 do
 
     #awk 截取端口流量信息
-	outputFlow_tcp=`cat /root/flowListen/tmp.txt | sed -n "$outputStartRow,$outputEndRow p" | grep "tcp spt:$var" | awk '{print $2 }'`
+	outputFlow_tcp=
+	        `cat /root/flowListen/tmp.txt 
+	        | sed -n "$outputStartRow,$outputEndRow p" 
+	        | grep "tcp spt:$var" 
+	        | awk '{print $2 }'`
 	echo $outputFlow_tcp
 	echo `date +%Y/%m/%d_%T`  port:$var  $outputFlow_tcp >> /root/flowListen/${thisDay}_daylog.txt
 
