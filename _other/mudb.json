@@ -1,0 +1,38 @@
+[
+  {
+    "d": 1,
+    "enable": 1,
+    "method": "***",
+    "obfs": "***",
+    "passwd": "***",
+    "port": 1111,
+    "protocol": "***",
+    "transfer_enable": 1,
+    "u": 1,
+    "user": "***"
+  },
+  {
+    "d": 2,
+    "enable": 1,
+    "method": "***",
+    "obfs": "***",
+    "passwd": "***",
+    "port": 1112,
+    "protocol": "***",
+    "transfer_enable": 1,
+    "u": 2,
+    "user": "***"
+  },
+  {
+    "d": 3,
+    "enable": 1,
+    "method": "***",
+    "obfs": "***",
+    "passwd": "***",
+    "port": 1113,
+    "protocol": "***",
+    "transfer_enable": 3,
+    "u": 1,
+    "user": "***"
+  }
+]

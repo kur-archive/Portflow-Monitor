@@ -1,0 +1,97 @@
+Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+    pkts      bytes target     prot opt in     out     source               destination
+       0        0            tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:1
+       0        0            tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:2
+       0        0            tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:3
+       0        0            tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:4
+       0        0            tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp dpt:5
+
+       0        0            udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp dpt:1
+       0        0            udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp dpt:2
+       0        0            udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp dpt:3
+       0        0            udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp dpt:4
+       0        0            udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp dpt:5
+
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
+    pkts      bytes target     prot opt in     out     source               destination
+       0        0            tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp spt:1
+       0        0            tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp spt:2
+       0        7            tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp spt:3
+       0        0            tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp spt:4
+       0        0            tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            tcp spt:5
+
+       0        0            udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp spt:1
+       0        0            udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp spt:2
+       0        0            udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp spt:3
+       0        0            udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp spt:4
+       0        0            udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp spt:5
+
+
+Chain FORWARD_IN_ZONES (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain FORWARD_IN_ZONES_SOURCE (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain FORWARD_OUT_ZONES (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain FORWARD_OUT_ZONES_SOURCE (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain FORWARD_direct (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain FWDI_public (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain FWDI_public_allow (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain FWDI_public_deny (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain FWDI_public_log (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain FWDO_public (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain FWDO_public_allow (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain FWDO_public_deny (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain FWDO_public_log (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain INPUT_ZONES (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain INPUT_ZONES_SOURCE (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain INPUT_direct (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain IN_public (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+
+Chain IN_public_allow (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+
+Chain IN_public_deny (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain IN_public_log (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
+
+Chain OUTPUT_direct (0 references)
+    pkts      bytes target     prot opt in     out     source               destination
