@@ -12,7 +12,7 @@
 * 修改文件
     1. 修改 `/chileNode/generate_flowlog.sh` 文件
 
-        1. `line 5` ,默认从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，请修改相关代码
+        1. `line 5` ,默认从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，请修改相关代码, 若需要监控的是`/home/ssr/mudb.json`则无需变动
         ```shell
         portlist=
             ` cat /home/ssr/mudb.json 
@@ -22,7 +22,7 @@
         ```
     
     2. 修改 `/chileNode/dateProcessing.sh` 文件
-        1. `line 15`, 因为也是从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，请修改相关代码
+        1. `line 15`, 因为也是从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，请修改相关代码， 若需要监控的是`/home/ssr/mudb.json`则无需变动
         
         ```bash
             代码同上
@@ -60,7 +60,8 @@
                "1235")
                    email_reciver="b@gmail.cc"
            	`./sendEmail -f ${email_sender} -t ${email_reciver} -s ${email_smtphost} -u ${email_title} -xu ${email_username} -xp ${email_password} -m ${email_content} -o tls=no`
-               ;;"1236")
+               ;;
+               "1236")
                    email_reciver="c@gmail.cc"
            	`./sendEmail -f ${email_sender} -t ${email_reciver} -s ${email_smtphost} -u ${email_title} -xu ${email_username} -xp ${email_password} -m ${email_content} -o tls=no`
                ;;
@@ -69,6 +70,13 @@
                    echo -e "~~~Time:${date} ~~~~Content: ${portflow}  is not sendEmail ">> /var/log/flowCal/error.log
                ;;
                esac
+        ```
+        如果有更多，新增 `case` 选项，例示代码如下
+        ```bash
+           "1237")
+               email_reciver="d@gmail.cc"
+               `./sendEmail -f ${email_sender} -t ${email_reciver} -s ${email_smtphost} -u ${email_title} -xu ${email_username} -xp ${email_password} -m ${email_content} -o tls=no`
+                          ;;
         ```
     
 <hr/>
@@ -118,7 +126,7 @@
             vim /etc/crontab 
         ```
         
-        添加 两条计划任务 ，输入完成后，文件大致为这样
+        添加 一条计划任务 ，输入完成后，文件大致为这样
                 
        ```bash
            SHELL=/bin/bash
