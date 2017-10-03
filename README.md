@@ -6,6 +6,13 @@
 [![license](https://img.shields.io/npm/l/express.svg)](#)
 
 项目 `实现思路` & `代码解析` 参见 [Doc](https://github.com/Kuri-su/Portflow-Monitor/blob/master/Thinking%26CodeResolve.md "Doc" )  
+
+## 简介
+主要用于 `socks5` 传输的一种 `纯shell` 统计<b>端口流量</b>的<b>可行思路</b>，主要为了交流和学习
+
+示例脚本可以用于正常使用，不过还是推荐之后更新的 `laravel` 版本，查看 [更新计划](https://github.com/Kuri-su/Portflow-Monitor#更新计划 "update plan")，查看 [运行效果](https://github.com/Kuri-su/Portflow-Monitor#运行效果)
+
+
 <hr/>
 # 安装步骤如下：
 
@@ -156,6 +163,12 @@
 关于项目 `实现思路` & `代码解析` 参见 [Doc](https://github.com/Kuri-su/Portflow-Monitor/blob/master/Thinking%26CodeResolve.md "Doc" ) 
 
 <hr/>
+
+## 运行效果
+![image](https://github.com/Kuri-su/Portflow-Monitor/blob/master/img/dirImg.png)
+![image](https://github.com/Kuri-su/Portflow-Monitor/blob/master/img/dayImg.png)
+![image](https://github.com/Kuri-su/Portflow-Monitor/blob/master/img/hourImg.png)
+
 
 ## WARNING
 因为 `flowCal_sendmail_bymaster.sh` 使用了 `linux` 上的 `sendEmail` 程序，而该程序久未更新和维护， `SSL` 在新版本的perl下运行会报错，而 `Gmall`是强制 `SSL`，所以推荐使用 `Sina` 邮箱，且 `Sina` 邮箱发邮件无限制， 而 `Gmail` 如果连续发邮件会有时间间隔限制(反垃圾邮件).
