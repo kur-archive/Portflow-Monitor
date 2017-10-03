@@ -184,3 +184,48 @@ echo -e '' >>  /root/flowListen/${thisDay}_daylog.txt
 
 ```
 
+
+* 文件 `dateProcessing.sh` :
+```bash
+    #此脚本每日0点1min执行
+    #统计前一日的流量情况，计入月流量记录中
+    
+    #获取年份的后两位
+        year=`date +%y`
+    # eg: 17
+    
+    #获取月份，01-12
+        month=`date +%m`
+    #eg:02
+    
+    #获取月份中的几号，用两位数表示，01-31
+        day=`date +%d`
+    #eg:02
+        
+    #获取今天的昨天
+        yesterday=`date -d "1 day ago" +"%y%m%d"`
+    
+    
+    #获取需要统计的端口列表
+        portlist=`cat /home/ssr/mudb.json | grep port | sed -r 's/( )+\"port\": //g' | sed 's/,$//g' `
+    #获取到全部的需要统计的端口
+    
+        for var in $portlist
+        do
+        #然后这里讲小时流量的记录的日志对应端口的数据摘取出来，累加
+            portflow=`cat ${yesterday}_daylog.txt|grep "port:$var" | cut -d " " -f 3`
+            sum=0
+            for avar in $portflow
+            do
+                sum=$(($sum+avar))
+            done
+            
+        #累加完成后记录到日流量日志中
+            echo ${yesterday}  port:$var  $sum >> ${year}${month}_monthlog.txt
+        done
+            echo -e '' >> ${year}${month}_monthlog.txt
+            
+```
+
+* 文件 `flowCal_sendmail_bymaster.sh` :<br/>
+    这里其实也差不多，逻辑也比较简单，代码里很多注释，就先不写了
