@@ -13,7 +13,9 @@ wait to add
 
 #从mudb.json文件中获取需要监控的端口
     portlist=`cat /home/ssr/mudb.json | grep port | sed -r 's/( )+\"port\": //g' | sed 's/,$//g' `
-#cat mudb.json文件, grep取出带有port关键字的行, 然后使用sed 指令逐步去掉端口号数字周围的别的字符, 最后将一列端口号赋值给portlist变量
+#cat mudb.json文件, grep取出带有port关键字的行, 然后使用sed 指令逐步去掉端口号数字周围的别的字符, 
+# 最后将一列端口号赋值给portlist变量
+
 #( mudb.json的例示在项目的 /_other/mudb.json )
 #sed -r 's/( )+\"port\": //g' 表示将 1~n个空格"port": 删除掉( 替换成空 ) , -r 表示支持正则语法, 后面的sed同理 
 
@@ -174,6 +176,7 @@ do
 
 	echo `date +%Y/%m/%d_%T`  port:$var  $outputFlow_tcp >> /root/flowListen/_nowlog.txt
 	
+	#重置 iptables 的 OUTPUT 的数据
 	`iptables -Z OUTPUT`
 done
 
