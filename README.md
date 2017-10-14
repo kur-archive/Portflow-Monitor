@@ -85,7 +85,7 @@
            "1237")
                email_reciver = "d@gmail.cc"
                `./sendEmail -f ${email_sender} -t ${email_reciver} -s ${email_smtphost} -u ${email_title} -xu ${email_username} -xp ${email_password} -m ${email_content} -o tls=no`
-                          ;;
+               ;;
         ```
     
 <hr/>
