@@ -180,12 +180,8 @@
 因为 `flowCal_sendmail_bymaster.sh` 使用了 `linux` 上的 `sendEmail` 程序，而该程序久未更新和维护， `SSL` 在新版本的perl下运行会报错，而 `Gmall`是强制 `SSL`，所以推荐使用 `Sina` 邮箱，且 `Sina` 邮箱发邮件无限制， 而 `Gmail` 如果连续发邮件会有时间间隔限制(反垃圾邮件).
 
 
-
-
-
 ## 更新计划
 + `子节点脚本`采用json格式来记录流量数据<br/>
-
 
 
 ## LICENSE
