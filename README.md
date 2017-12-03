@@ -4,7 +4,7 @@
 ## 简介
 主要用于 `socks5` 传输的一种 `纯 shell` 统计端口流量的可行思路，主要为了交流和学习<br>
 该分支为 `laravel` 分支，对原本的 `shell` 脚本做了一次封装<br/>
-如果需要查看 `纯Shell` 的脚本，请访问 `Shell` 分支：[Shell分支](https://github.com/Kuri-su/Portflow-Monitor/tree/Shell)
+如果需要查看 `纯Shell` 的脚本，请访问 `Shell` 分支：[Shell分支](https://github.com/Kuri-su/Portflow-Monitor/tree/shell)
 
 ## 文件结构
 ```
