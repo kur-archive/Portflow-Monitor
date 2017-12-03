@@ -85,7 +85,7 @@
            "1237")
                email_reciver = "d@gmail.cc"
                `./sendEmail -f ${email_sender} -t ${email_reciver} -s ${email_smtphost} -u ${email_title} -xu ${email_username} -xp ${email_password} -m ${email_content} -o tls=no`
-                          ;;
+               ;;
         ```
     
 <hr/>
@@ -164,7 +164,7 @@
 
 关于项目 `实现思路` & `代码解析` 参见 [Doc](https://github.com/Kuri-su/Portflow-Monitor/blob/master/_doc/Thinking%26CodeResolve.md "Doc" ) 
 
-<hr/>
+
 
 ## 运行效果
 日志目录截图<br/>
@@ -179,7 +179,7 @@
 ## WARNING
 因为 `flowCal_sendmail_bymaster.sh` 使用了 `linux` 上的 `sendEmail` 程序，而该程序久未更新和维护， `SSL` 在新版本的perl下运行会报错，而 `Gmall`是强制 `SSL`，所以推荐使用 `Sina` 邮箱，且 `Sina` 邮箱发邮件无限制， 而 `Gmail` 如果连续发邮件会有时间间隔限制(反垃圾邮件).
 
-<hr/>
+
 
 
 
@@ -191,7 +191,7 @@
     
     2. 邮件发送，Linux上的一些邮件发送程序长时间无人维护，以至于在新版的perl下ssl发送无法运行。。。使用Laravel（php）的smtp邮件发送类，搭配blade模板渲染，发送邮件更加方便，再和之后要做的后台搭配效果更佳
 
-<hr/>
+
 
 ## LICENSE
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>MIT</b>
