@@ -1,6 +1,10 @@
 # Portflow-Monitor
 <small><small><small>linux端口流量监视 with Laravel</small></small></small>
 
+[![branch](https://img.shields.io/badge/branch-laravel-green.svg)](#)
+[![Operating System](https://img.shields.io/badge/OperatingSystem-CentOS%207.x-red.svg)](#)
+[![license](https://img.shields.io/npm/l/express.svg)](#)
+
 ## 简介
 主要用于 `socks5` 传输的一种 `纯 shell` 统计端口流量的可行思路，主要为了交流和学习<br>
 该分支为 `laravel` 分支，对原本的 `shell` 脚本做了一次封装<br/>
