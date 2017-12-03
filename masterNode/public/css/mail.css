@@ -1,0 +1,70 @@
+* {
+    font-family: 等线;
+}
+
+.mainPage {
+    width: 800px;
+    height: auto;
+    padding: 25px 75px;
+    background: #fdfdfd;
+    position: relative;
+    z-index: 999;
+    box-shadow: 10px 10px 10px #ccc;
+}
+
+.serverName {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 400%;
+    letter-spacing: 10px;
+}
+
+.topImg {
+    width: 800px;
+}
+
+.bill {
+    line-height: 50px;
+    letter-spacing: 2px;
+
+}
+
+.short_sentences {
+    margin-left: 50px;
+}
+
+.description {
+    margin: 50px 0 0 10px;
+    background: #fafafa;
+    line-height: 50px;
+}
+
+.description span {
+    margin-left: 50px;
+}
+
+.div_by_qrcode {
+    width: 600px;
+}
+
+.qrcode {
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-weight: bold;
+    margin-left: 0;
+    font-size: 120%;
+}
+
+.b {
+    font-size: 120%;
+    color: #444444;
+    font-weight: bold;
+}
+
