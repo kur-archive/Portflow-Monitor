@@ -209,7 +209,7 @@
 <br/>
 至此，部署完成<br/>
 
-关于项目 `实现思路` & `代码解析` 参见 [Doc](https://github.com/Kuri-su/Portflow-Monitor/blob/master/_doc/Thinking%26CodeResolve.md "Doc" )
+关于项目 `实现思路` & `代码解析` 参见 [Doc](https://github.com/Kuri-su/Portflow-Monitor/blob/laravel/_doc/Thinking%26CodeResolve.md "Doc" )
 
 ## 更新计划
 无
