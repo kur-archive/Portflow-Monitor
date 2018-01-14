@@ -5,7 +5,7 @@
 [![Operating System](https://img.shields.io/badge/OperatingSystem-CentOS%207.x-red.svg)](#)
 [![license](https://img.shields.io/npm/l/express.svg)](#)
 
-项目 `实现思路` & `代码解析` 参见 [Doc](https://github.com/Kuri-su/Portflow-Monitor/blob/master/_doc/Thinking%26CodeResolve.md "Doc" )   
+项目 `实现思路` & `代码解析` 参见 [Doc](https://github.com/Kuri-su/Portflow-Monitor/blob/shell/_doc/Thinking%26CodeResolve.md "Doc" )   
 
 ## 简介
 主要用于 `socks5` 传输的一种 `纯shell` 统计<b>端口流量</b>的<b>可行思路</b>，主要为了交流和学习
@@ -21,7 +21,7 @@
 * 修改文件
     1. 修改 `/chileNode/generate_flowlog.sh` 文件
 
-        1. `line 5` ,默认从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，请修改相关代码, 若需要监控的是`/home/ssr/mudb.json`则无需变动，点击 [此处](https://github.com/Kuri-su/Portflow-Monitor/blob/master/_other/mudb.json) 参见 `mudb.json` 文件例示
+        1. `line 5` ,默认从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，请修改相关代码, 若需要监控的是`/home/ssr/mudb.json`则无需变动，点击 [此处](https://github.com/Kuri-su/Portflow-Monitor/blob/shell/_other/mudb.json) 参见 `mudb.json` 文件例示
         ```shell
         portlist=
             ` cat /home/ssr/mudb.json 
@@ -31,7 +31,7 @@
         ```
     
     2. 修改 `/chileNode/dateProcessing.sh` 文件
-        1. `line 15`, 因为也是从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，请修改相关代码， 若需要监控的是`/home/ssr/mudb.json`则无需变动，点击 [此处](https://github.com/Kuri-su/Portflow-Monitor/blob/master/_other/mudb.json) 参见 `mudb.json` 文件例示
+        1. `line 15`, 因为也是从 `/home/ssr/mudb.json` 中获取需要监控的端口，如需要监控别的端口，请修改相关代码， 若需要监控的是`/home/ssr/mudb.json`则无需变动，点击 [此处](https://github.com/Kuri-su/Portflow-Monitor/blob/shell/_other/mudb.json) 参见 `mudb.json` 文件例示
         
         ```bash
             代码同上
@@ -162,17 +162,17 @@
 <br/>
 至此，部署完成<br/>
 
-关于项目 `实现思路` & `代码解析` 参见 [Doc](https://github.com/Kuri-su/Portflow-Monitor/blob/master/_doc/Thinking%26CodeResolve.md "Doc" ) 
+关于项目 `实现思路` & `代码解析` 参见 [Doc](https://github.com/Kuri-su/Portflow-Monitor/blob/shell/_doc/Thinking%26CodeResolve.md "Doc" ) 
 
 
 
 ## 运行效果
 日志目录截图<br/>
-![image](https://github.com/Kuri-su/Portflow-Monitor/blob/master/_img/dirImg.png "dirImg")<br/>
+![image](https://github.com/Kuri-su/Portflow-Monitor/blob/shell/_img/dirImg.png "dirImg")<br/>
 小时日志截图<br/>
-![image](https://github.com/Kuri-su/Portflow-Monitor/blob/master/_img/hourImg.png "hourImg")<br/>
+![image](https://github.com/Kuri-su/Portflow-Monitor/blob/shell/_img/hourImg.png "hourImg")<br/>
 每日目录截图<br/>
-![image](https://github.com/Kuri-su/Portflow-Monitor/blob/master/_img/dayImg.png "dayImg")<br/>
+![image](https://github.com/Kuri-su/Portflow-Monitor/blob/shell/_img/dayImg.png "dayImg")<br/>
 
 
 
