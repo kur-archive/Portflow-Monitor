@@ -181,8 +181,8 @@
 
 
 ## 更新计划
-+ `子节点脚本`采用json格式来记录流量数据<br/>
+**Null**
 
 
 ## LICENSE
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>MIT</b>
+**MIT**
