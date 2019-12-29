@@ -46,9 +46,9 @@
   * 在linux/unix下，可以使用指令 `yum install composer -y`(Centos下,别的linux发行版请使用相应的指令) 进行安装,
   * window下参考 [composerCN](http://docs.phpcomposer.com/00-intro.html#Installation-Windows)的windows下的安装方法进行安装
 
-* 设置使用中国Composer源
+* 设置使用 CN Composer source
   ```shell
-  $ composer config -g repo.packagist composer https://packagist.laravel-china.org
+  $ composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
   ```
   
 **在安装之前请确保已经安装 php ，且php版本大于7,若未安装请参考以下指令安装**
