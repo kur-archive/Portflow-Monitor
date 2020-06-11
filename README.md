@@ -40,7 +40,7 @@
 
 ## 安装与部署
 
-** 在安装之前请确保已经安装 Composer，若未安装请参考以下指令安装 **
+**在安装之前请确保已经安装 Composer，若未安装请参考以下指令安装**
 
 * 安装
   * 在 linux/unix 下，可以使用指令 `yum install composer -y`(Centos 下, 别的 linux 发行版请使用相应的指令) 进行安装,
@@ -51,7 +51,7 @@
   $ composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
   ```
 
-** 在安装之前请确保已经安装 php，且 php 版本大于 7, 若未安装请参考以下指令安装 **
+**在安装之前请确保已经安装 php，且 php 版本大于 7, 若未安装请参考以下指令安装**
 
 [在 `CentOS7` 下 `yum` 安装 `PHP7`](http://blog.csdn.net/liubag/article/details/53138366)
 
@@ -212,7 +212,9 @@
 关于项目 ` 实现思路 ` & ` 代码解析 ` 参见 [Doc](https://github.com/Kuri-su/Portflow-Monitor/blob/laravel/_doc/Thinking%26CodeResolve.md "Doc" )
 
 ## 更新计划
+
 **Null**
 
 ## LICENSE
+
 **MIT**
